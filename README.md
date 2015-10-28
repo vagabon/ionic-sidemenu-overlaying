@@ -35,7 +35,7 @@ Load the js with requireJs :
         ...
 ```
 
- * Load the Angular Module in your App
+ * Load the Angular Module **ionic-sidemenu-overlaying** in your App
 
 ```JAVASCRIPT
     angular.module('<your_main_angular_module>', ['ionic', 'ionic-sidemenu-overlaying', ...])
