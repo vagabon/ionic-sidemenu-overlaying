@@ -9,14 +9,12 @@ Demo :
 Load the js with requireJs :
 
  * Include in the PATH
-
     >require.config({
-    
     >>    paths: {
-    
+
     >>        ...
     
-    >>        **"ionic-slidemenu-overlaying"**: **'../lib/ionic-slidemenu-overlaying/dist/ionic-slidemenu-overlaying'**,
+    >>        "ionic-sidemenu-overlaying": '../lib/ionic-sidemenu-overlaying/dist/ionic-sidemenu-overlaying',
     
     >>        ...
 
@@ -26,7 +24,7 @@ Load the js with requireJs :
     
     >>  'ionic',
     
-    >>  **'ionic-slidemenu-overlaying'**,
+    >>  'ionic-sidemenu-overlaying',
     
     >>], function () {
     
@@ -34,7 +32,7 @@ Load the js with requireJs :
 
  * Load the Angular Module in your App
 
-    > angular.module('<your_main_angular_module>', ['ionic', **'ionic-slidemenu-overlaying'**, ...])
+    > angular.module('<your_main_angular_module>', ['ionic', 'ionic-sidemenu-overlaying', ...])
 
  * HTML
 
