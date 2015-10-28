@@ -4,11 +4,11 @@ This is an angular's directive for ionic 1.1.0, the sidemenu will expand all ove
 
 Demo : http://vagabond.synology.me/sidemenu/www/
 
-## Install
+## Install (with or without RequireJS)
 
 Load the js with requireJs :
 
- * Include in the PATH
+ * Include in the head
  
 ```JAVASCRIPT
     <script src="lib/ionic-sidemenu-overlaying/dist/ionic-sidemenu-overlaying.js"></script>
@@ -24,15 +24,11 @@ Load the js with requireJs :
         ...
 ```
 
- * Add it to the project width requireJS and after 'ionic'
+ * Add it to the project width requireJS and after load 'ionic'
 
 ```JAVASCRIPT
-    require([
-        ...
-        'ionic-sidemenu-overlaying',
-        ...
-    ], function () {
-        ...
+    require(['ionic'], function () {
+       require(['ionic-sidemenu-overlaying', ...
 ```
 
  * Load the Angular Module **ionic-sidemenu-overlaying** in your App
