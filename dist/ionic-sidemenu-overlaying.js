@@ -20,10 +20,9 @@ define([], function () {
           scope: true,
           compile: function (element, attr) {
             element.addClass('menu-content pane');
-            console.log(element)
             element.css("top", "44px");
             element.css("z-index", "1");
-            element.css("margin-left", "-1050px");
+            element.css("margin-left", "-1000px");
 
             return {pre: prelink};
             function prelink($scope, $element, $attr, sideMenuCtrl) {
