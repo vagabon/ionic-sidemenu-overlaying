@@ -60,7 +60,7 @@ Load the js with requireJs :
 ```JAVASCRIPT
     "dependencies": {
         ...
-        "ionic-sidemenu-overlaying": "vagabon/ionic-sidemenu-overlaying#>=1.0.0",
+        "ionic-sidemenu-overlaying": "vagabon/ionic-sidemenu-overlaying#>=0.0.1",
         ...
 ```
 
