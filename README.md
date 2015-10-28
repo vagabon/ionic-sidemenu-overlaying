@@ -2,66 +2,74 @@
 
 This is an angular's directive for ionic 1.1.0, the sidemenu will expand all over the main content.
 
-Demo :
+Demo : http://vagabond.synology.me/sidemenu/www/
 
-## Install
+## Install (with or without RequireJS)
 
 Load the js with requireJs :
 
- * Include in the PATH
-
+ * Include in the head
+ 
+```JAVASCRIPT
+    <script src="lib/ionic-sidemenu-overlaying/dist/ionic-sidemenu-overlaying.js"></script>
+```
+ 
+ * Or with RequireJS
+ 
+```JAVASCRIPT
     require.config({
         paths: {
-            ...
-            "ionic-slidemenu-overlaying": '../lib/ionic-slidemenu-overlaying/dist/ionic-slidemenu-overlaying',
-            ...
-
- * Add it to the project
-
-    require([
-      'ionic',
-      'ionic-slidemenu-overlaying'
-    ], function () {
         ...
+        "ionic-sidemenu-overlaying": '../lib/ionic-sidemenu-overlaying/dist/ionic-sidemenu-overlaying',
+        ...
+```
 
- * Load the Angular Module in your App
+ * Add it to the project width requireJS and after load 'ionic'
 
-    angular.module('<your_main_angular_module>', ['ionic', 'ionic-slidemenu-overlaying', ...])
+```JAVASCRIPT
+    require(['ionic'], function () {
+       require(['ionic-sidemenu-overlaying', ...
+```
+
+ * Load the Angular Module **ionic-sidemenu-overlaying** in your App
+
+```JAVASCRIPT
+    angular.module('<your_main_angular_module>', ['ionic', 'ionic-sidemenu-overlaying', ...])
+```
 
  * HTML
 
+```HTML
     <ion-side-menus>
-      <ion-side-menu-content>
-        <ion-nav-bar class="bar-stable">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <ion-nav-view name="menuContent" drag-content="false"></ion-nav-view>
+        </ion-side-menu-content>
 
-          <ion-nav-buttons side="left">
-            <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
-            </button>
-          </ion-nav-buttons>
-        </ion-nav-bar>
-
-        <ion-nav-view name="menuContent" drag-content="false"></ion-nav-view>
-      </ion-side-menu-content>
-
-      <ion-side-menu side="left" edge-drag-threshold="200">
-        <ion-content>
-          <ion-list>
-            ...
-          </ion-list>
-        </ion-content>
-      </ion-side-menu>
+        <ion-side-menu side="left" edge-drag-threshold="200">
+            <ion-content>
+                <ion-list>...</ion-list>
+            </ion-content>
+        </ion-side-menu>
     </ion-side-menus>
+```
 
 ## Integration in bower
 
+```JAVASCRIPT
+    "dependencies": {
+        ...
+        "ionic-sidemenu-overlaying": "vagabon/ionic-sidemenu-overlaying#>=0.0.1",
+        ...
+```
 
-  "dependencies": {
-    ...
-    "ionic-sidemenu-overlaying": "vagabon/ionic-sidemenu-overlaying#>=1.0.0",
-    ...
+ * Update the libs of your project
 
-
-    ```shell
-    bower update
-    ```
+```SHELL
+    #bower update
+```
 
