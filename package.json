@@ -1,0 +1,18 @@
+{
+  "name": "ionic-sidemenu-overlaying",
+  "version": "1.0.0",
+  "description": "Ionic sidemenu over the main content (need requirejs)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vagabon/ionic-slidemenu-overlaying"
+  },
+  "keywords": [
+    "ionic",
+    "slide menu",
+    "framework",
+    "browser",
+    "client-side"
+  ],
+  "author": ""
+}
